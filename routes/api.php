@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Models\Project;
-
+use App\Http\Controllers\Api\ProjectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,12 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Route::get('/projects', [ProjectController::class,'index']);
+Route::get('/test',[ProjectController::class,'index']);
 
-
-Route::get('/test', function () {
-    return response()->json([
-        'name' => 'Cinzia',
-        'role' => 'admin'
-    ]);
-});
