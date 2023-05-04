@@ -20,4 +20,19 @@ class ProjectController extends Controller
             'success' => true,
             'results' => $results,
         ]);
-    }}
+    }
+
+    public function show($slug)
+    {
+        return response()->json([
+            'success' => true,
+            'project' => $project
+        ]);
+    
+        return response()->json([
+            'success' => false,
+            'error' => 'Nessun post trovato'
+        ]);
+    }
+
+}
